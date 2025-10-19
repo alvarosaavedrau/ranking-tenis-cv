@@ -3,8 +3,8 @@ import logging
 
 app = func.FunctionApp()
 
-@app.function_name(name="HttpExample")
-@app.route(route="")  # Responde en la raíz / sin prefijo api
+@app.function_name(name="HttpExampleRoot")
+@app.route(route="")
 def http_example(req: func.HttpRequest) -> func.HttpResponse:
     logging.info("HTTP trigger processed a request.")
     return func.HttpResponse(
